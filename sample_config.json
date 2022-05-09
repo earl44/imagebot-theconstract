@@ -1,15 +1,15 @@
 {
-    "base_url": "https://botsin.space",
-    "client_id": "0dd...65d",
-    "client_secret": "a7e...6b7",
-    "access_token": "9af...d33",
+    "base_url": "https://theconstract.com",
+    "client_id": "",
+    "client_secret": "",
+    "access_token": "",
 
     "post_interval": 30,
 
-    "required_tags": ["rating:s"],
-    "forbidden_tags": ["comic", "animated", "sexual_harassment", "nazi", "guro"],
+    "required_tags": [],
+    "forbidden_tags": [],
 
-    "forward_messages": true,
+    "forward_messages": false,
     "message": "Forwarding received message",
     "maintainer": "dukhovni@mastodon.mit.edu",
 
