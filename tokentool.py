@@ -8,8 +8,8 @@ def input_from(prompt, choices):
 
 def register_app():
     app_name = input('App name [autoresponder]: ') or 'autoresponder'
-    base_url = (input('Instance base URL [https://mastodon.social]: ')
-        or 'https://mastodon.social')
+    base_url = (input('Instance base URL [https://theconstract.com]: ')
+        or 'https://theconstract.com')
 
     client_id, client_secret = Mastodon.create_app(
         app_name,
@@ -27,8 +27,8 @@ def register_app():
 
 def authenticate(base_url=None, client_id=None, client_secret=None):
     if base_url is None:
-        base_url = (input('Instance base URL [https://mastodon.social]: ')
-            or 'https://mastodon.social')
+        base_url = (input('Instance base URL [https://theconstract.com]: ')
+            or 'https://theconstract.com')
     if client_id is None:
         client_id = input('Enter your client id: ')
     if client_secret is None:
