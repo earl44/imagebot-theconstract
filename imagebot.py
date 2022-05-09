@@ -15,7 +15,7 @@ from mastodon import Mastodon
 from pybooru import Danbooru
 
 DELETE_CMD = '$delete'
-DANBOORU_URL = 'https://danbooru.donmai.us'
+DANBOORU_URL = 'http://hercsi.com'
 DANBOORU_MAX_ATTEMPTS = 10
 ALLOWED_MIME_TYPES = ['image/jpeg', 'image/png', 'image/gif']
 PIXIV_SOURCE_PATTERN = 'https://www.pixiv.net/member_illust.php?mode=medium&illust_id=%s'
@@ -213,7 +213,7 @@ class ImageBot:
                 logging.error('unknown mime type %s for file %s', image_type, image['file_url'])
                 return
             media = self.api.media_post(image_data, image_type)
-            self.api.status_post('{0}/posts/{1}\nsource: {2}'.format(DANBOORU_URL, image['id'], source), media_ids=[media['id']], visibility='unlisted', sensitive=True)
+            self.api.status_post(' ', media_ids=[media['id']], visibility='unlisted', sensitive=True)
             logging.info('posted image: %d', image['id'])
         except Exception as e:
             logging.error('exception while posting image %d: %s', image['id'], e)
